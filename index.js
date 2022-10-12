@@ -5,10 +5,10 @@ import pino from 'pino';
 import { Parser } from 'xml2js';
 
 dotenv.config();
-// Definition of constant values
+
 const { EMAIL } = process.env;
 const { PASSWORD } = process.env;
-const BASEURL = 'https://com.sunny-portal.de';
+const { BASEURL } = process.env;
 
 const METHOD = 'get';
 const SERVICE = 'data';
