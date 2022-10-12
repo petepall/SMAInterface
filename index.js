@@ -1,11 +1,13 @@
 import axios from 'axios';
 import crypto from 'crypto';
+import dotenv from 'dotenv';
 import pino from 'pino';
 import { Parser } from 'xml2js';
 
+dotenv.config();
 // Definition of constant values
-const EMAIL = 'email';
-const PASSWORD = 'password';
+const { EMAIL } = process.env;
+const { PASSWORD } = process.env;
 const BASEURL = 'https://com.sunny-portal.de';
 
 const METHOD = 'get';
