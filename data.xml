@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<sma.sunnyportal.services>
+		<service
+			name="authentication"
+			method="get"
+			version="100"
+			request-oid="a172bb0e-f2e5-4a3a-bab1-7dc541c31dec"
+			creation-date="10/9/2022 12:13:49 PM">
+			<authentication
+				identifier="dfb93ce5-d9c5-43eb-aa40-ba928d05ea1f"
+				key="0e340680-2d25-4e02-87f3-a9dbc8da5eab">
+				OK
+			</authentication>
+		</service>
+	</sma.sunnyportal.services>
+
+<!-- encoded signature b'5BRSI7jOzR/IeS0IJwmwQrz+dPk=' -->
