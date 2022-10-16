@@ -1,10 +1,11 @@
 import crypto from 'crypto';
 
-const KEY = '0d13d893-7de9-4082-a5c6-3b75d96f325f';
-const METHOD = 'get';
-const SERVICE = 'data';
-const date = '2022-10-10T14:22:15'; // (new Date()).toISOString().slice(0, 19);
-const IDENTIFIER = 'db9f5633-c5da-452a-8f42-c3124d48e530';
+// vu17HiRN7Ijmh60v0DJo1xSK/44=
+const KEY = '455d292c-b385-4e56-ba22-3776b4d08193';
+const METHOD = 'DELETE';
+const SERVICE = 'authentication';
+const date = '2022-10-15T16:33:06'; // (new Date()).toISOString().slice(0, 19);
+const IDENTIFIER = '4035e459-691d-4e7c-8b37-135d36c3269d';
 
 const encoded = crypto.createHmac('sha1', KEY)
 	.update(METHOD.toLowerCase())
