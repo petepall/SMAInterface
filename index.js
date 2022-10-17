@@ -44,7 +44,7 @@ let xmlData = {};
 
 try {
 	xmlData = await axios.get(url);
-	const data = await xmlData.data;
+	const { data } = xmlData;
 
 	parser.parseString(data, (error, result) => {
 		if (!result['sma.sunnyportal.services'].service.error) {
@@ -81,9 +81,8 @@ logger.info(plantPath);
 if (xmlData.status === 200) {
 	try {
 		plantData = await axios.get(url);
-		const dataPlant = await plantData.data;
 
-		parser.parseString(dataPlant, (error, result) => {
+		parser.parseString(plantData.data, (error, result) => {
 			logger.info(`Status code: ${plantData.status}`);
 			logger.info(result);
 			plantoid = result['sma.sunnyportal.services'].service.plantlist.plant.$.oid;
@@ -114,9 +113,8 @@ let plantInfo = {};
 if (plantData.status === 200) {
 	try {
 		plantInfo = await axios.get(url);
-		const dataPlantInfo = await plantInfo.data;
 
-		parser.parseString(dataPlantInfo, (error, result) => {
+		parser.parseString(plantInfo.data, (error, result) => {
 			logger.info(`Status code: ${plantInfo.status}`);
 			logger.info(result);
 		});
@@ -145,9 +143,8 @@ logger.info(deletePath);
 if (plantInfo.status === 200) {
 	try {
 		const end = await axios.delete(url);
-		const dataEnd = await end.data;
 
-		parser.parseString(dataEnd, (error, result) => {
+		parser.parseString(end.data, (error, result) => {
 			logger.info(`Status code: ${end.status}`);
 			logger.info(result);
 		});
